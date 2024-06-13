@@ -8,12 +8,70 @@
     integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="style.css">
-  <script src="app.js"></script>
   <title>Document</title>
 </head>
 
-<body>
+<body data-bs-theme="dark">
+  <!-- NOTE Header -->
+  <header class="container-fluid border-bottom border-4 p-3">
+    <div class="row">
+      <div class="col-12">
+        <h1>Welcome To The Betting Ring</h1>
+      </div>
+    </div>
+  </header>
 
+  <main>
+    <section class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="m-3" id="highScore">
+            High Score
+          </h1>
+          <h1 class="m-3 mdi mdi-chart-line-variant" id="bank">
+            bank
+          </h1>
+          <h1 class="text-success m-3 mdi mdi-arrow-up-circle-outline " id="moneyGained">
+            $0.00
+          </h1>
+          <h1 class="text-danger m-3 mdi mdi-arrow-down-circle-outline" id="moneyLost">
+            $0.00
+          </h1>
+        </div>
+        <div class="text-center col-12">
+          <h1>The Emoticons</h1>
+          <span class="fs-1" id="teamOne"></span>
+        </div>
+        <div class="text-center d-flex p-5">
+          <div class="col-4">
+            <button class="btn btn-danger fs-3" onclick="betTeamOne(10)"> $10.00</button>
+          </div>
+          <div class="col-4">
+            <button class="btn btn-danger fs-3" onclick="betTeamOne(50)"> $50.00</button>
+          </div>
+          <div class="col-4">
+            <button class="btn btn-danger fs-3" onclick="betTeamOne(bank)"> All In</button>
+          </div>
+        </div>
+        <div class="text-center align-content-center col-12">
+          <h1>The Demoticons</h1>
+          <span class="fs-1" id="teamTwo"></span>
+        </div>
+        <div class="text-center d-flex p-5">
+          <div class="col-4">
+            <button class="btn btn-danger fs-3" onclick="betTeamTwo(10)"> $10.00</button>
+          </div>
+          <div class="col-4">
+            <button class="btn btn-danger fs-3" onclick="betTeamTwo(50)"> $50.00</button>
+          </div>
+          <div class="col-4">
+            <button class="btn btn-danger fs-3" onclick="betTeamTwo(bank)"> All In</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="app.js" defer></script>
 </body>
 
 </html>
